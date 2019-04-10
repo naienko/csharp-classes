@@ -7,7 +7,7 @@ namespace classes
 	public class Company {
 		public string Name { get; }
 
-		public DateTime CreatedOn { get; }
+		public int CreatedOn { get; }
 
 		public List<Employee> Employees { get; private set; } = new List<Employee>();
 

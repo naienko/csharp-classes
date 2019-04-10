@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace classes
 {
@@ -10,20 +11,23 @@ namespace classes
         Company corporation = new Company("Pawprint Productions", 2002);
 
         // Create three employees
-        Employee CEO = new Employee("Summer Rainault");
-        Employee.Title = "CEO";
-        Employee.Hire();
+        Employee CEO = new Employee("Summer Rainault") {
+            Title = "CEO"
+        };
+        CEO.Hire();
 
-        Employee CFO = new Employee("Kieran Dubhglas");
-        Employee.Title = "CFO";
-        Employee.Hire();
+        Employee CFO = new Employee("Kieran Dubhglas") {
+            Title = "CFO"
+        };
+        CFO.Hire();
 
-        Employee CIO = new Employee("Barry Allen");
-        Employee.Title = "CIO";
-        Employee.Hire();
+        Employee CIO = new Employee("Barry Allen") {
+            Title = "CIO"
+        };
+        CIO.Hire();
 
         // Assign the employees to the company
-        Company.HireEmployees(new List<Employee> {
+        corporation.HireEmployees(new List<Employee> {
             CEO, CFO, CIO
         });
 
